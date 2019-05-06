@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Bombom</title>
+</head>
+<body>
+    <h1>Sonho meu</h1>
+    <div class="container">
+    {% for crush in crushs %}
+        <div class="card">
+            <div>
+                <img src="{{ crush.foto.url }}" alt="">
+            </div>
+            <h2>{{ crush.nome }}</h2>
+            <p>{{ crush.signo }}</p>
+            <p>{{ crush.qualidade }}</p>
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
